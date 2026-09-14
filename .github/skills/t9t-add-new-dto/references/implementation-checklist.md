@@ -14,7 +14,7 @@ This checklist is based on `docs/Adding-a-new-DTO.md` from the main `t9t` reposi
 4. Add English and German header translations in `src/main/resources/translations/headers_en.properties` and `headers_de.properties`.
 5. Add the grid config JSON in `src/main/resources/gridconfig/<viewModel>.json`.
 6. Define the entity in the JPA module's `entity` BDDL file and include the natural-key uniqueness index.
-7. Add the resolver method to the `*Resolvers.xtend` class annotated with `@AutoResolver42`.
+7. Add the resolver method to the module's `*Resolvers.xtend` class and follow the resolver annotation pattern already used by analogous resolvers there (for example `@AutoResolver42` where that is the established convention).
 8. Create the mapper Xtend class and the JPA request handlers:
    - search handler
    - CRUD handler
