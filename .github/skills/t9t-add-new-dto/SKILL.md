@@ -38,7 +38,7 @@ Copy and track this checklist:
 3. Preserve existing package names, module boundaries, file naming conventions, and menu placement patterns.
 4. Do not invent RTTI values, natural keys, labels, menu sections, or screen positions. Ask when missing.
 5. Only create the optional lean-search handler when the natural key has a single field.
-6. Only add `@AllCanAccessGlobalTenant` or `@GlobalTenantCanAccessAll` when the requester explicitly asks for it.
+6. Follow the access-annotation pattern used by analogous DTOs and resolvers in the target module. If the intended authorization model is still unclear after inspecting those examples, ask the requester before adding or omitting annotations such as `@AllCanAccessGlobalTenant` or `@GlobalTenantCanAccessAll`.
 7. For JPA request handlers, use an existing handler in the same repository as the concrete template, especially the `CsvConfiguration` handlers mentioned in the reference.
 8. After the code compiles, create the SQL migration from the generated SQL instead of hand-writing table details from scratch.
 
